@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./estilo.css"
 import TabTamanho from "../tabTamanho/tabTamanho"
+import SimilarProd from "../similarProd/similarProd"
 
 class LeftProd extends Component {
     render(){
@@ -24,7 +25,7 @@ class LeftProd extends Component {
                     </div>
                     <div className="content--infos-product">
                         <div className="content--name-product">
-                            <h2 class="productName">Camiseta Hummel Brick Infantil - 6</h2>
+                            <h2 className="productName">Camiseta Hummel Brick Infantil - 6</h2>
                         </div>
                         <div className="content--sku-reference">
                             <div className="skuReference">BR000081-M_6</div>
@@ -43,7 +44,17 @@ class LeftProd extends Component {
                                 <li>
                                     <TabTamanho/>
                                 </li>
-                            </ul>
+                            </ul> 
+                        </div>
+                        <SimilarProd/>
+                        <div className="content--buy-prod">
+                          <a target="_top" className="buy-button-ref"></a>  
+                        </div>
+                        <div class="content--short-description-prod">
+                            <h3>Descrição</h3>
+                            <div className="productDescription">
+                                A camiseta infantil Brick, tem modelagem adequada para as crianças um visual despojado e o icônico logo da hummel na parte frontal. É uma camiseta causal, super confortável e com um design clássico.... 
+                            </div>
                         </div>
                     </div>
                 </div>

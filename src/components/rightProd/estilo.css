@@ -148,3 +148,49 @@ ul{
     justify-content: flex-start;
     width: 100%;
 }
+.content--buy-prod{
+    display: flex;
+    flex-flow: column wrap;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 20px;
+}
+.buy-button-ref{
+    display: block;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    font-size: 0;
+    font-weight: 500;
+    padding: 20px 0;
+}
+.buy-button-ref:before {
+    content: "Adicionar à sacola";
+    font-size: 18px;
+}
+.buy-button-ref:hover {
+    background: #24B26D;
+}
+.content--short-description-prod {
+    border-top: 2px solid rgba(219,219,219,.52);
+    margin-top: 35px;
+    padding-top: 40px;
+}
+.content--short-description-prod h3 {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}

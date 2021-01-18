@@ -42,7 +42,7 @@ class SimilarProd extends Component{
 
     render(){
         
-        const {error, isLoaded, imagem0, imagem1, imagem2, link0} = this.state;
+        const {imagem0, imagem1, imagem2, link0} = this.state;
 
         return(
             <div className="component--similar-prod">

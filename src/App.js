@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import './App.css';
-import api from "./api"
-import LeftProd from "./components/leftProd/leftProd"
-import RightProd from "./components/rightProd/rightProd"
+import api from "./api";
+import LeftProd from "./components/leftProd/leftProd";
+import RightProd from "./components/rightProd/rightProd";
+import MasterEspecification from "./components/masterEspecification/masterEspecification";
+import PrateleiraProd from "./components/prateleiraProd/prateleiraProd";
 
 class App extends Component {
   constructor(props){
@@ -42,10 +44,14 @@ class App extends Component {
   render(){
     const {error, isLoaded, items} = this.state;
     return (
-      <section className="master product">
-        {console.log('PRODUTO', items)}
-        <LeftProd/>
-        <RightProd/>
+      <section>
+        <section className="master product">
+          {console.log('PRODUTO', items)}
+          <LeftProd/>
+          <RightProd/>
+        </section>
+        <MasterEspecification/>
+        <PrateleiraProd/>
       </section>
     );
   }

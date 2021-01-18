@@ -1,0 +1,131 @@
+.specification{
+    background-color: #f7f7f7;
+    padding: 40px 0 70px;
+    display: flex;
+    flex-flow: column wrap;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+.content{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+.content--description-prod{
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-flow: column wrap;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+.content--description-prod h2 {
+    width: 100%;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 25px;
+}
+.productDescription{
+    display: flex; 
+    flex-flow: column wrap;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: left;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    width: 100%;
+}
+.content--specification-prod{
+    margin-top: 30px;
+}
+.especificacoes{
+    width: 100%;
+    font-size: 0;
+    font-weight: 700;
+    color: #000;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.especificacoes:after{
+    content: "Características";
+    font-size: 22px;
+}
+.content--specification-prod .table--descricao{
+    width: 100%;
+}
+th.name-field {
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+table td.value-field {
+    width: 100%;
+    display: block;
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+td.value-field.caracteristicas {
+    line-height: 2.5;
+}
+.content--specification-prod table{
+    width: 100%;
+}
+table td.guia-tamanho table {
+    max-width: 535px;
+    float: left;
+    display: table;
+}
+td.guia-tamanho tbody tr:first-child td {
+    font-size: 16px!important;
+    font-weight: 700!important;
+    background-color: #DBDBDB!important;
+}
+.first-line{
+    background-color: #FFF;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    text-align: center;
+    word-break: normal;
+}
+.vertical-top{
+    vertical-align: top;
+}
+.vertical-middle{
+    vertical-align: middle;
+}
+.vertical-bottom{
+    vertical-align: bottom;
+}
+td.guia-tamanho tbody tr:nth-child(even) td {
+    background: #f7f7f7!important;
+}
+td.guia-tamanho tbody tr td {
+    font-family: Montserrat,sans-serif!important;
+    font-size: 16px!important;
+    border: none!important;
+}
+td.guia-tamanhos table tbody tr:nth-child(odd):not(:first-child) td {
+    background: #fff!important;
+}

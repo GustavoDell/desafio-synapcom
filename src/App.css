@@ -3,3 +3,8 @@
   /* align-items: center; */
   justify-content: space-between;
 }
+* {
+  font-family: Montserrat,sans-serif;
+  outline: 0;
+  box-sizing: border-box;
+}

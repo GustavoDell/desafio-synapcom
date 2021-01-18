@@ -1,0 +1,136 @@
+.content--carouselColection{
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-flow: column wrap;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 30px 0 80px;
+    background: #fff;
+}
+.content {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.content--carouselColection h3 {
+    font-size: 30px;
+    font-weight: 900;
+    color: #000;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.content--carouselColection .slick-product {
+    margin-top: 20px;
+    width: 298px;
+    margin-bottom: 25px;
+    margin-right: 20px;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+.content--carouselColection li .box-item{
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-flow: column wrap;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 0;
+    background: #fff;
+}
+.content--carouselColection li .box-item .product-image {
+    height: 310px;
+    position: relative;
+    padding: 0 5px;
+    text-align: center;
+    margin: 0px auto;
+}
+.content--carouselColection li .box-item .product-image img{
+    max-width: 250px;
+    max-height: 250px;
+    width: auto !important;
+    height: auto;
+}
+.content--carouselColection li .box-item h3.product-name {
+    display: flex;
+    flex-flow: column wrap;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5px;
+    overflow-x: hidden;
+}
+.content--carouselColection li .box-item h3.product-name a{
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 290px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Montserrat,sans-serif;
+}
+.content--carouselColection li .box-item .box-available{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+.content--carouselColection li .box-item .box-available .price{
+    display: flex;
+    flex-flow: column wrap;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+.price a{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-family: Montserrat,sans-serif;
+    outline: 0;
+    box-sizing: border-box;
+}
+li .box-item .box-available .best-price strong {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+}
+.price{
+    text-decoration: none !important;
+}
+.slick-dots{
+    display: flex !important;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+.slick-prev{
+    display: none !important;
+}
+.slick-next{
+    display: none !important;
+}
+@media screen and (min-width: 1192px){
+    .content {
+        max-width: 1310px;
+        padding: 0;
+    }
+}

@@ -72,6 +72,8 @@ th.name-field {
     display: block;
     text-align: left;
     margin-bottom: 10px;
+    font-weight: 700;
+    color: #000;
 }
 table td.value-field {
     width: 100%;
@@ -128,6 +130,12 @@ td.guia-tamanho tbody tr td {
 }
 td.guia-tamanhos table tbody tr:nth-child(odd):not(:first-child) td {
     background: #fff!important;
+}
+@media screen and (min-width: 1192px){
+    .content {
+        max-width: 1310px;
+        padding: 0;
+    }
 }
 @media (max-width: 1191px) and (min-width: 200px){
     .content--description-prod h2{

@@ -71,7 +71,7 @@ class PrateleiraProd extends Component{
         return(
             <section className="content--carouselColection">
                 <div className="content">
-                    <h3>Você Pode Gostar</h3>
+                    <h3>Você pode gostar</h3>
                     <div className="slider-img">
                         <Slider {...settings}>
                                 {this.produto.map(itens => (

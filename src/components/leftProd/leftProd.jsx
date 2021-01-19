@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Camiseta1 from "./imgs/camiseta_1.jpg"
 import Camiseta2 from "./imgs/camiseta_2.jpg"
 import "slick-carousel/slick/slick.css";
@@ -6,34 +6,59 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "./estilo.css"
 
-function LeftProd() {
+class LeftProd extends Component {
+    constructor(props){
+        super(props);
+        
+        this.state = {
+            imagem0: [],
+            imagem1: [],
+        }
+    }
     
-    var settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        fade: true,
-        cssEase: 'linear',
-        width: 500,
-    };
-    
-    return(
-        <div className="content--leftProd">
-            <div className="slider-img">
-                <Slider {...settings}>
-                    <div>
-                        <img src={Camiseta1}/>
-                    </div>
-                    <div>
-                        <img src={Camiseta2}/>
-                    </div>
-                </Slider>
+    componentDidMount(){
+        fetch("/api/catalog_system/pub/products/search/?fq=productId:3760")
+        .then(res => res.json())
+        .then(
+            (result) => {
+                this.setState({
+                    isLoaded: true,
+                    imagem0: result[0].items[0].images[0].imageUrl,
+                    imagem1: result[0].items[0].images[1].imageUrl,
+                });
+            }
+        )
+        
+    }
+    render(){
+        var settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            fade: true,
+            cssEase: 'linear',
+            width: 500,
+        };
+        const {imagem0, imagem1} = this.state;
+        return(
+            <div className="content--leftProd">
+                <div className="slider-img">
+                    <Slider {...settings}>
+                        <div>
+                            {console.log("produto teste", imagem0)}
+                            <img src={imagem0}/>
+                        </div>
+                        <div>
+                            <img src={imagem1}/>
+                        </div>
+                    </Slider>
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
     
 }
 

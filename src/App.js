@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './App.css';
-import api from "./api";
 import LeftProd from "./components/leftProd/leftProd";
 import RightProd from "./components/rightProd/rightProd";
 import MasterEspecification from "./components/masterEspecification/masterEspecification";

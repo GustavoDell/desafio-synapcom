@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Camiseta1 from "./imgs/camiseta_1.jpg"
-import Camiseta2 from "./imgs/camiseta_2.jpg"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";

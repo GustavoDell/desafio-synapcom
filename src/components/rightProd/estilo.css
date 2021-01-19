@@ -98,6 +98,7 @@ ul{
     color: #000;
     font-weight: 300;
     font-style: normal;
+    display: none;
 }
 .best-price{
     font-size: 26px;

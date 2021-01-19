@@ -4,6 +4,7 @@ import LeftProd from "./components/leftProd/leftProd";
 import RightProd from "./components/rightProd/rightProd";
 import MasterEspecification from "./components/masterEspecification/masterEspecification";
 import PrateleiraProd from "./components/prateleiraProd/prateleiraProd";
+import BuyFloat from "./components/buyFloat/buyFloat"
 
 class App extends Component {
   constructor(props){
@@ -11,11 +12,23 @@ class App extends Component {
     this.state = {
       error: null,
       isLoaded: false,
-      items: []
+      items: [],
+      className: 'hidden'
     }
   }
   
-
+  handleScroll() { 
+    if (document.documentElement.scrollTop > 141) {
+       this.setState({
+         className: 'show'
+       })
+       console.log("SCROOL SENDO REALIZADO")
+     }else{
+      this.setState({
+        className: 'hidden'
+      })
+      }
+   }
   componentDidMount(){
     this.callApi()
       .then(
@@ -31,6 +44,8 @@ class App extends Component {
           })
         }))
       .catch(err => console.log(err));
+
+      window.onscroll = () => this.handleScroll()
   }
   callApi = async () => {
     const response = await fetch('/api/catalog_system/pub/products/search/?fq=productId:3760');
@@ -51,6 +66,8 @@ class App extends Component {
         </section>
         <MasterEspecification/>
         <PrateleiraProd/>
+        {console.log("scrooll", document.documentElement.scrollTop)}
+        <BuyFloat className={this.state.className}/>
       </section>
     );
   }

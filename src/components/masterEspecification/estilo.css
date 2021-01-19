@@ -129,3 +129,41 @@ td.guia-tamanho tbody tr td {
 td.guia-tamanhos table tbody tr:nth-child(odd):not(:first-child) td {
     background: #fff!important;
 }
+@media (max-width: 1191px) and (min-width: 200px){
+    .content--description-prod h2{
+        border-top: 1px solid #dbdbdb;
+        padding: 20px 0;
+        margin: 0;
+        background: url(./plus.svg) right center no-repeat;
+        background-size: 27px;
+        cursor: pointer;
+    }
+    .content--description-prod .productDescription {
+        display: none;
+    }
+    .content--description-prod .productDescription.atv {
+        display: block;
+    }
+    .content--description-prod h2.atv {
+        background: url(./minus.svg) right center no-repeat;
+        background-size: 27px;
+    }
+    .content--specification-prod table {
+        display: none;
+    }
+    .content--specification-prod table.atv {
+        display: block;
+    }
+    .content--specification-prod h4 {
+        border-top: 1px solid #dbdbdb;
+        padding: 20px 0;
+        margin: 0;
+        background: url(./plus.svg) right center no-repeat;
+        background-size: 27px;
+        cursor: pointer;
+    }
+    .content--specification-prod h4.atv {
+        background: url(./minus.svg) right center no-repeat;
+        background-size: 27px;
+    }
+}

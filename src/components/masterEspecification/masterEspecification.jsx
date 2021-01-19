@@ -1,21 +1,25 @@
 import React, { Component } from "react";
 import "./estilo.css"
 class MasterEspecification extends Component{
+    state ={
+        active: false,
+        active2: false
+    }
     render(){
         return(
             <section className="specification">
                 <div className="content">
-                    <div className="content--description-prod">
-                        <h2>Descrição</h2>
-                        <div className="productDescription">
+                    <div className="content--description-prod" onClick={() => this.setState({active: !this.state.active})}>
+                        <h2 className={this.state.active ? "atv" : " "}>Descrição</h2>
+                        <div className={this.state.active ? "productDescription atv" : "productDescription"}>
                             A camiseta infantil Brick, tem modelagem adequada para as crianças um visual despojado e o icônico logo da hummel na parte frontal. É uma camiseta causal, super confortável e com um design clássico.
                         </div>
                     </div>
                     <div className="content--specification-prod">
-                        <div className="caracteristicas">
-                            <h4 className="group especificacoes"></h4>
+                        <div className="caracteristicas" onClick={() => this.setState({active2: !this.state.active2})}>
+                            <h4 className={this.state.active2 ? "group especificacoes atv" : "group especificacoes"}></h4>
                         </div>
-                        <table cellSpacing="0" className="table--descricao">
+                        <table cellSpacing="0" className={this.state.active2 ? "table--descricao atv" : "table--descricao"}>
                             <tbody>
                                 <tr className="even">
                                     <th className="name-field genero">Gênero</th>

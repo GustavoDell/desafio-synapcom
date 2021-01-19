@@ -4,7 +4,7 @@
 .content--product{
     width: 100%;
 }
-img{
+.content--leftProd img{
     max-width: 600px;
     max-height: 600px;
     width: auto !important;
@@ -23,4 +23,25 @@ img{
 }
 .slick-dots {
     bottom: 0px !important;
+}
+@media (max-width: 1191px) and (min-width: 200px){
+    .content--leftProd{
+        display: flex;
+        flex-flow: column wrap;
+        -webkit-box-align: end;
+        align-items: flex-end;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .slider-img{
+        max-width: initial;
+        width: 100%;
+    }
+    .content--leftProd img{
+        max-width: 85%;
+        max-height: 85%;
+        width: auto !important;
+        margin: 0px auto;
+    }
 }

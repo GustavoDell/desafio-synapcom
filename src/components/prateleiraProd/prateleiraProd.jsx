@@ -40,7 +40,32 @@ class PrateleiraProd extends Component{
             infinite: false,
             speed: 300,
             slidesToShow: 4,
-            slidesToScroll: 4
+            slidesToScroll: 4,
+            responsive:[
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                    }
+                }
+            ]
         };
 
         return(
@@ -67,7 +92,7 @@ class PrateleiraProd extends Component{
                                                 <a title={itens.[0].productName} href={itens.[0].link}>
                                                    <div className="prices">
                                                        <span className="best-price">
-                                                            <strong>R$ {itens.[0].items.[0].sellers.[0].commertialOffer.Price}</strong>
+                                                            <strong>R$ {itens.[0].items.[0].sellers.[0].commertialOffer.Price.toString().replace(".",",")}</strong>
                                                        </span>
                                                    </div>
                                                 </a>

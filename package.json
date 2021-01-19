@@ -12,6 +12,8 @@
     "react-scripts": "4.0.1",
     "react-slick": "^0.27.14",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^10.13.0",
+    "sweetalert2-react": "^0.8.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

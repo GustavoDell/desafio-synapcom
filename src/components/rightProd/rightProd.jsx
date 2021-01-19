@@ -2,8 +2,16 @@ import React, { Component } from "react";
 import "./estilo.css"
 import TabTamanho from "../tabTamanho/tabTamanho"
 import SimilarProd from "../similarProd/similarProd"
+import SweetAlert from 'sweetalert2-react';
+
 
 class LeftProd extends Component {
+    constructor(){
+        super();
+        this.state = {
+            show: false
+        }
+    }
     render(){
         return(
             <div className="content--rightProd">
@@ -48,7 +56,13 @@ class LeftProd extends Component {
                         </div>
                         <SimilarProd/>
                         <div className="content--buy-prod">
-                          <a target="_top" className="buy-button-ref"></a>  
+                          <a target="_top" className="buy-button-ref" onClick={() => this.setState({ show: true })}></a>  
+                          <SweetAlert
+                                show={this.state.show}
+                                title="Produto adicionado ao carrinho"
+                                text="Obrigado pela compra"
+                                onConfirm={() => this.setState({ show: false })}
+                            />
                         </div>
                         <div class="content--short-description-prod">
                             <h3>Descrição</h3>

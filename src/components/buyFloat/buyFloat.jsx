@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import './estilo.css';
+import SweetAlert from 'sweetalert2-react';
+
 
 class BuyFloat extends Component {
+    constructor(){
+        super();
+        this.state = {
+            show: false
+        }
+    }
   render() {
     return(
     <section className={this.props.className}>
@@ -44,7 +52,13 @@ class BuyFloat extends Component {
                     </div>
                 </div>
                 <div className="content--buy">
-                    <a className="buy-button buy-button-ref"></a>
+                    <a className="buy-button buy-button-ref" className="buy-button-ref" onClick={() => this.setState({ show: true })}></a>
+                    <SweetAlert
+                        show={this.state.show}
+                        title="Produto adicionado ao carrinho"
+                        text="Obrigado pela compra"
+                        onConfirm={() => this.setState({ show: false })}
+                    />
                 </div>
             </div>
         </div>
